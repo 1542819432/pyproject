@@ -23,9 +23,12 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 1,使用path将booktest的路由 进行包含
-    path('booktest/',include('booktest.urls'))
+
+# 1,使用path将booktest的路由 进行包含
+    # path('booktest/',include('booktest.urls'))
+    path('',include('booktest.urls',namespace='booktest')),
 ]
+
 
 # 项目的所有路由地址配置文件
 # admin路由是Django自带的后台管理路由
