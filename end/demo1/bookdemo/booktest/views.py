@@ -44,15 +44,37 @@ def deletebook(request, bookid):
     # return HttpResponseRedirect(redirect_to='/')
     return redirect(to='/')
 
+def addbook(request):
+    if request.method == "GET":
+        return render(request,'addbook.html')
+    elif request.method == "POST":
+        book = Book()
+        book.title = request.POST.get("bookname")
+        book.price = request.POST.get("bookprice")
+        book.pub_date = request.POST.get("bookpub_date")
+        book.save()
+        # url = reverse("booktest:addbook")
+        return redirect(to="/")
 
-def deletehero(request, heroid):
+def editbook(request,bookid):
+    book = Book.objects.get(id=bookid)
+
+    if request.method == "GET":
+        return render(request,'editbook.html',{"book":book})
+    elif request.method == "POST":
+        book.title = request.POST.get("bookname")
+        book.price = request.POST.get("bookprice")
+        book.pub_date = request.POST.get("bookpub_date")
+        book.save()
+        return redirect(to="/")
+
+def deletehero(request,heroid):
     hero = Hero.objects.get(id=heroid)
     bookid = hero.book.id
     hero.delete()
 
     url = reverse("booktest:detail", args=(bookid,))
     return redirect(to=url)
-
 
 def addhero(request,bookid):
     if request.method == "GET":
