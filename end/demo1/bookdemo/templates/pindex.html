@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投票页</title>
+</head>
+<body>
+<div>
+    <h1> 投票信息汇总</h1>
+
+    {% for title in titles %}
+    <ul>
+        <a href="{% url 'polls:pdetail' title.id %}"> {{title.name}} </a>
+    </ul>
+    {% endfor %}
+</div>
+
+
+
+</body>
+</html>

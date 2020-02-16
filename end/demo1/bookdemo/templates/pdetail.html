@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+</head>
+<body>
+<form action="#" method="post">
+    <h1>这里是投票页</h1>
+    <h2>投票信息:{{title.name}}</h2>
+    <h4>投票选项</h4>
+    {% for opt in title.option.all %}
+        <ul>
+            <input type="radio" name="choice">{{opt.choice}}
+            <a href="{% url 'polls:result' opt.id %}"> 提交 </a>
+        </ul>
+
+    {% endfor %}
+
+</form>
+<a href="{% url 'polls:pindex' %}">返回</a>
+</body>
+</html>
