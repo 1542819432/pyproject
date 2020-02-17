@@ -8,8 +8,10 @@
     <div>
         <h2>书名:{{book.title}}</h2>
         <ul>
-            {% for hero in book.hero_set.all %}
-                <li> {{hero.name}} -- {{hero.gender}} -- {{hero.content}} <a href="{% url 'booktest:edithero' hero.id %}">编辑</a> <a href="{% url 'booktest:deletehero' hero.id %}">删除</a> </li>
+            {% for hero in book.heros.all %}
+                <li> {{hero.name}} -- {{hero.gender}} -- {{hero.content}}
+                    <a href="{% url 'booktest:edithero' hero.id %}">编辑</a>
+                    <a href="{% url 'booktest:deletehero' hero.id %}">删除</a> </li>
             {% endfor %}
         </ul>
 

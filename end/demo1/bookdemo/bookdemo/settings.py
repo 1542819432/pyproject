@@ -25,7 +25,11 @@ SECRET_KEY = '_l#lubopn6#glb5&3$@sv!ee7i4fx&b+f$5@b+)nqs&gq@m0)w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 只有关掉调试模式才能显示404 之类的错误  上线以后设置成False
+# DEBUG = False
+# 如何DEBUG设置为False ALLOWED_HOSTS代表那些域名ip电脑可以访问服务
+ALLOWED_HOSTS = ['*',]
+
 
 
 # Application definition
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'booktest',
     'polls',
+    'download',
 ]
 
 MIDDLEWARE = [
@@ -123,4 +128,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # 需要配置静态文件所处位置
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
+
 

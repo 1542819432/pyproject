@@ -9,9 +9,11 @@ urlpatterns = [
     # 使用正则分组可以向视图函数中传递参数
     # 第一个参数就是路由 第二个参数就是视图函数
     # 第一个参数中如果有正则分组 小括号 则正则分组匹配的内容会作为实参传递
-    url(r'^pindex/$',views.pindex,name='pindex'),
+    url(r'^$',views.pindex,name='pindex'),
     url(r'^pdetail/(\d+)/$',views.pdetail,name='pdetail'),
     url(r'^result/(\d+)/$',views.result,name='result'),
+
+    # url(r'^$',views.IndexView.as_view(),name='pindex')
 
 
 

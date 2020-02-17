@@ -10,12 +10,13 @@
     <h2>投票信息:{{title.name}}</h2>
     <h4>投票选项</h4>
     {% for opt in title.option.all %}
-        <ul>
-            <input type="radio" name="choice">{{opt.choice}}
-            <a href="{% url 'polls:result' opt.id %}"> 提交 </a>
-        </ul>
-
+        {% if forloop.counter == 1 %}
+            <li><input type="radio" checked name="num" value="{{opt.id}}"> {{opt.choice}}</li>
+        {% else %}
+            <li><input type="radio" name="num" value="{{opt.id}}"> {{opt.choice}}</li>
+        {% endif %}
     {% endfor %}
+    <input type="submit" value="投票">
 
 </form>
 <a href="{% url 'polls:pindex' %}">返回</a>
