@@ -12,6 +12,13 @@ urlpatterns = [
     url(r'^$',views.pindex,name='pindex'),
     url(r'^pdetail/(\d+)/$',views.pdetail,name='pdetail'),
     url(r'^result/(\d+)/$',views.result,name='result'),
+    url(r'^login/$',views.login,name='login'),
+    url(r'^regist/$',views.regist,name='regist'),
+    url(r'^logout/$',views.logout,name='logout'),
+
+
+
+
 
     # url(r'^$',views.IndexView.as_view(),name='pindex')
 

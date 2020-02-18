@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>投票页</title>
-</head>
-<body>
-<div>
-    <h1> 投票信息汇总</h1>
+{% extends 'base.html' %}
 
+
+{% block body %}
+    <h1> 投票信息汇总</h1>
     {% for title in titles %}
     <ul>
         <li> <a href="{% url 'polls:pdetail' title.id %}">{{forloop.counter}}.{{title.name}} </a></li>
     </ul>
     {% endfor %}
-</div>
+{% endblock %}
 
 
-
-</body>
-</html>

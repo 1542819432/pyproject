@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>详情</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+
+{% block body %}
 <form action="#" method="post">
+    {% csrf_token %}
     <h1>这里是投票页</h1>
     <h2>投票信息:{{title.name}}</h2>
     <h4>投票选项</h4>
@@ -20,5 +18,6 @@
 
 </form>
 <a href="{% url 'polls:pindex' %}">返回</a>
-</body>
-</html>
+<br>
+{% endblock %}
+

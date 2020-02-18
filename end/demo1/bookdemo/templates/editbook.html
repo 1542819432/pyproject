@@ -6,6 +6,7 @@
 </head>
 <body>
 <form action="#" method="post">
+    {% csrf_token %}
     书名：<input type="text" name="bookname" value="{{book.title}}">
     <br>
     价格：<input type="text" name="bookprice" value="{{book.price}}">
