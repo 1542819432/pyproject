@@ -7,6 +7,7 @@ from django.views.generic import View, TemplateView, ListView, CreateView, Detai
 
 from django.contrib.auth import authenticate, login as lin, logout as lot
 
+from .forms import *
 
 # Create your views here.
 
@@ -78,24 +79,36 @@ def result(request, oid):
 
 def login(request):
     if request.method == "GET":
-        return render(request, 'login.html')
+        # 2.使用表单类生成一个表单
+        lf = LoginForm()
+        return render(request,'login.html',{"lf":lf})
+        # 1.需要在html中自己手动编写表单
+        # return render(request, 'login.html')
     elif request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
+        lf = LoginForm(request.POST)
+        if lf.is_valid():
+            username = lf.cleaned_data["username"]
+            password = lf.cleaned_data["password"]
+
+        # username = request.POST.get("username")
+        # password = request.POST.get("password")
         # 可以使用django自带的用户认证系统 认证成功返回用户 失败返回None
-        user = authenticate(username=username, password=password)
+            user = authenticate(username=username, password=password)
         # 调用Django登录方法 其实是为了生成cookie
-        if user:
-            lin(request, user)
-            next = request.GET.get("next")
-            if next:
-                url = next
+            if user:
+                lin(request, user)
+                next = request.GET.get("next")
+                if next:
+                    url = next
+                else:
+                    url = reverse("polls:pindex")
+                return redirect(to=url)
             else:
-                url = reverse("polls:pindex")
-            return redirect(to=url)
+                # url = reverse("polls:login")
+                # return redirect(to=url)
+                return  render(request,'login.html',{"errors":"用户名密码不匹配","lf":lf})
         else:
-            url = reverse("polls:login")
-            return redirect(to=url)
+            return HttpResponse("未知错误")
 
 
 def logout(request):
@@ -106,21 +119,31 @@ def logout(request):
 
 def regist(request):
     if request.method == "GET":
-        return render(request,'regist.html')
+
+        # 3.使用模型表单类
+        rf = RegistForm()
+        return render(request,'regist.html',{"rf":rf})
+        # 1.使用html标签生成表单
+        # return render(request,'regist.html')
     else:
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        password2 = request.POST.get("password2")
-        if User.objects.filter(username=username).count()>0:
-            return HttpResponse("用户名已存在")
-        else:
+        rf = RegistForm(request.POST)
+        if rf.is_valid():
+            username = rf.cleaned_data["username"]
+            password = rf.cleaned_data["password"]
+            password2 = rf.cleaned_data["password2"]
+            # if User.objects.filter(username=username).count()>0:
+            #     # return HttpResponse("用户名已存在")
+            #     return render(request, 'regist.html', {"errors": "用户名已存在"})
+            # else:
             if password == password2:
-                User.objects.create_user(username=username,password=password)
+                # User.objects.create_user(username=username,password=password)
+                rf.save()
                 url = reverse("polls:login")
                 return redirect(to=url)
             else:
-                return HttpResponse("密码不一致")
-
-
+                # return HttpResponse("密码不一致")
+                return render(request, 'regist.html', {"errors": "密码不一致","rf":rf})
+        else:
+            return render(request, 'regist.html', {"errors": "用户名已存在","rf":rf})
 
 
