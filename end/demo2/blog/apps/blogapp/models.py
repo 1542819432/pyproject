@@ -1,5 +1,5 @@
 from django.db import models
-# 导入负文本字段
+# 导入富文本字段
 from DjangoUeditor.models import UEditorField
 
 # Create your models here.
@@ -8,14 +8,20 @@ class Ads(models.Model):
     img = models.ImageField(upload_to='ads', verbose_name="图片")
     desc = models.CharField(max_length=20, null=True, verbose_name="图片描述")
 
+    def __str__(self):
+        return self.desc
 
 class Category(models.Model):
     name = models.CharField(max_length=20, verbose_name="分类名")
 
+    def __str__(self):
+        return self.name
 
 class Tag(models.Model):
     name = models.CharField(max_length=20, verbose_name="标签名")
 
+    def __str__(self):
+        return self.name
 
 class Article(models.Model):
     title = models.CharField(max_length=50, verbose_name="文章标题")
@@ -25,10 +31,12 @@ class Article(models.Model):
     author = models.CharField(max_length=20, verbose_name="作者")
     views = models.PositiveIntegerField(default=0, verbose_name="浏览量")
     # body = models.TextField(verbose_name="正文")
-    # 使用百度Ueditor 负文本字段类型
+    # 使用百度Ueditor 富文本字段类型
     body = UEditorField(imagePath='imgs/',width='100%')
     tags = models.ManyToManyField(Tag)
 
+    def __str__(self):
+        return self.title
 
 class Comment(models.Model):
     name = models.CharField(max_length=20, verbose_name="评论人")
@@ -38,4 +46,5 @@ class Comment(models.Model):
     create_time = models.DateTimeField(auto_now_add=True, verbose_name="评论时间")
     article = models.ForeignKey(Article, on_delete=models.CASCADE, verbose_name="所属文章")
 
-
+    def __str__(self):
+        return self.name
