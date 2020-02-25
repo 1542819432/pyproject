@@ -1,0 +1,151 @@
+﻿
+{% extends 'base.html' %}
+
+{% block load %}
+
+{% endblock %}
+
+{% block header %}
+    <div class="header-topbar">
+        <div class="container-fluid">
+            <div class="left">
+                <ul class="top-nav">
+                    <li>
+                        <span>Email : </span> <a href="#">contact@naturix.com </a>
+                    </li>
+                    <li> Phone : +100 3434 1057</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="top-nav">
+                    <li>
+                        <form action="#" class="currency">
+                            <div class="search-selectpicker selectpicker-wrapper">
+                                <select class="selectpicker input-price" data-width="100%"
+                                        data-toggle="tooltip">
+                                    <option>USD</option>
+                                    <option>EUR</option>
+                                    <option>ARS</option>
+                                    <option>BRL</option>
+                                    <option>XAF</option>
+                                    <option>HUF</option>
+                                </select>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="#" class="currency">
+                            <div class="search-selectpicker selectpicker-wrapper">
+                                <select class="selectpicker input-price" data-width="100%"
+                                        data-toggle="tooltip">
+                                    <option>United State</option>
+                                    <option>Argentina</option>
+                                    <option>Germany</option>
+                                    <option>Cameroon</option>
+                                    <option>Hungary</option>
+                                </select>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google-plus"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-behance"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <!--Breadcrumb Section Start-->
+    <section class="breadcrumb-bg">
+        <div class="theme-container container ">
+            <div class="site-breadcumb white-clr">
+                <h2 class="section-title"><strong class="clr-txt">naturix </strong> <span
+                        class="light-font">Shop </span></h2>
+                <ol class="breadcrumb breadcrumb-menubar">
+                    <li><a href="#"> Home </a> Contact</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <!--Breadcrumb Section End-->
+
+
+    <!-- Shop Starts-->
+    <section class="contact-wrap sec-space-bottom">
+        <div class="container rel-div pt-50">
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="contact-map">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-details">
+                        <h3 class="fsz-25"><span class="light-font">naturix  </span> <strong>Address </strong></h3>
+                        <h6 class="sub-title-1 pb-15">ORGANIC STORE</h6>
+
+                        <h5 class="clr-txt fsz-12 pt-15">naturix STORE</h5>
+                        <p>142 West newton, NY 19088, United States</p>
+
+                        <ul>
+                            <li><strong>Call: </strong> <i>+7 (100) 2234 999</i></li>
+                            <li><strong>Email: </strong> <i> <a href='#'>info@montero.com</a> </i></li>
+                            <li><strong>Skype: </strong> <i> <a href='#'> Montero.Property </a> </i></li>
+                            <li><strong>Facebook: </strong> <i> <a href='#'> Montero.facebook </a> </i></li>
+                            <li><strong>Twitter: </strong> <i> <a href='#'> @Montero.Property </a> </i></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider-full-1"></div>
+
+            <div class="pt-50 col-md-8 col-md-offset-2">
+                <h3 class="fsz-25 text-center"><span class="light-font">Contact </span> <strong>naturix </strong></h3>
+                <h6 class="sub-title-1 text-center">ORGANIC STORE</h6>
+
+                <div class="contact-form pt-50">
+                    <form class="contact-form row">
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Name" required="" type="text">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Email" required="" type="email">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input class="form-control" placeholder="Phone" type="text">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <textarea class="form-control" placeholder="Message" cols="12" rows="4"></textarea>
+                        </div>
+                        <div class="form-group col-sm-12 text-center pt-15">
+                            <button class="theme-btn" type="submit"><strong> SEND EMAIL </strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- / Shop Ends -->
+
+    <!-- / CONTENT AREA -->
+{% endblock %}
+
+
+{% block subs %}
+
+{% endblock %}
+
+{% block js %}
+<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyBwarlVfqlWKfonKl9T0wr9VGC0ynvbdiU&callback=initMap" async
+        defer></script>
+{% endblock %}

@@ -1,0 +1,2273 @@
+﻿{% extends 'base.html' %}
+
+{% block load %}
+<div id="loading">
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block main %}
+<!-- Main Slider Start -->
+<section class="main-slide">
+    <img alt=".." src="/static/assets/img/slider/slide-1.jpg"/>
+    <div class="tbl-wrp slide-1">
+        <div class="text-middle">
+            <div class="tbl-cell">
+                <div class="slide-caption container text-center">
+                    <div class="slide-title">
+                        <img src="/static/assets/img/icons/slide-txt-1.png" alt=""/>
+                        <span>100% Guarantee</span>
+                    </div>
+                    <div class="slide-title2 pb-50">
+                        <h2 class="section-title"><span class="light-font">Live </span> <strong>organic </strong> <span
+                                class="light-font">for live </span> <strong>healthy </strong></h2>
+                        <h4 class="sub-title"> ORGANIC FRUITS, VEGETABLES, AND LOT MORE TO YOUR DOOR </h4>
+                    </div>
+                    <div class="slide">
+                        <a href="#" class="slide-btn"> Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Main Slider Ends -->
+
+<!-- Organic All Starts-->
+<section class="organic-all sec-space-bottom">
+    <div class="pattern">
+        <img alt="" src="/static/assets/img/icons/white-pattern.png"/>
+    </div>
+    <div class="section-icon">
+        <img alt="" src="/static/assets/img/icons/icon-1.png"/>
+    </div>
+    <div class="container">
+        <div class="organic-wrap">
+            <img class="logo-img" alt="" src="/static/assets/img/logo/logo-1.png"/>
+            <div class="tabs-box">
+                <ul class="theme-tabs">
+                    <li class=""><a href="#product-tab-1" data-toggle="tab"> <span class="light-font">organic </span>
+                        <strong>fruits </strong> </a></li>
+                    <li class="active"><a href="#product-tab-2" data-toggle="tab"> <span
+                            class="light-font">organic </span> <strong>vegetables </strong> </a></li>
+                    <li class=""><a href="#product-tab-3" data-toggle="tab"> <span class="light-font">organic </span>
+                        <strong>juices </strong> </a></li>
+                    <li class=""><a href="#product-tab-4" data-toggle="tab"> <span class="light-font">organic </span>
+                        <strong>dried fruits </strong> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="tab-content organic-content row">
+                <div id="product-tab-1" class="tab-pane fade active in">
+                    <div class="product-slider-1 dots-1">
+                        {% for g in goods %}
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/media/{{g.img}}"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> 有机 </span>
+                                            <strong>{{g.name}}</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        {% comment %}
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box active">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endcomment %}
+                    </div>
+                </div>
+                <div id="product-tab-2" class="tab-pane fade">
+                    <div class="product-slider-1 dots-1">
+
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box active">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="product-tab-3" class="tab-pane fade">
+                    <div class="product-slider-1 dots-1">
+
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box active">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="product-tab-4" class="tab-pane fade">
+                    <div class="product-slider-1 dots-1">
+
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box active">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/1.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>tomato</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/2.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span> <strong>cabbege</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/6.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>onion</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/3.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>cherry</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/4.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>salad</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-box">
+                                <div class="product-media">
+                                    <img class="prod-img" alt="" src="/static/assets/img/products/5.png"/>
+                                    <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                    <div class="prod-icons">
+                                        <a href="#" class="fa fa-heart"></a>
+                                        <a href="#" class="fa fa-shopping-basket"></a>
+                                        <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                    </div>
+                                </div>
+
+                                <div class="product-caption">
+                                    <h3 class="product-title">
+                                        <a href="#"> <span class="light-font"> organic </span>
+                                            <strong>pineapple</strong></a>
+                                    </h3>
+                                    <div class="price">
+                                        <strong class="clr-txt">$50.00 </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Organic All Ends -->
+
+<!-- Organic Farmfood Starts-->
+<section class="organic-farm sec-space-top light-bg">
+
+    <img alt="" src="/static/assets/img/extra/sec-img-1.png" class="left-bg-img"/>
+    <img alt="" src="/static/assets/img/extra/sec-img-2.png" class="center-bg-img"/>
+
+    <div class="container rel-div">
+        <div class="title-wrap">
+            <h2 class="section-title"><span class="light-font">we are </span> <strong>organic farmfood <img
+                    src="/static/assets/img/icons/logo-icon.png" alt=""/> </strong></h2>
+            <h4 class="sub-title"><span> ABOUT naturix FARMFOOD </span></h4>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="feature-wrap">
+                    <img src="/static/assets/img/extra/feature-1.png" alt=""/>
+                    <h3 class="title-1 ptb-15"><span class="light-font">fresh from </span> <strong> naturix
+                        farm</strong></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
+                    <a href="#" class="sm-bnt-wht">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="feature-wrap">
+                    <img src="/static/assets/img/extra/feature-2.png" alt=""/>
+                    <h3 class="title-1 ptb-15"><span class="light-font"> 100%</span> <strong> organic goods</strong>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
+                    <a href="#" class="sm-bnt-wht">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="feature-wrap">
+                    <img src="/static/assets/img/extra/feature-3.png" alt=""/>
+                    <h3 class="title-1 ptb-15"><span class="light-font">premium </span> <strong> quality</strong></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
+                    <a href="#" class="sm-bnt-wht">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="feature-wrap">
+                    <img src="/static/assets/img/extra/feature-4.png" alt=""/>
+                    <h3 class="title-1 ptb-15"><span class="light-font">100% </span> <strong>natural</strong></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
+                    <a href="#" class="sm-bnt-wht">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="rel-div feature-img">
+            <img src="/static/assets/img/extra/feature.png" alt=""/>
+        </div>
+    </div>
+</section>
+<!-- / Organic Farmfood Ends -->
+
+<!-- Our Products Starts-->
+<section class="organic-product sec-space">
+    <div class="container">
+        <div class="row sec-space-top">
+            <div class="col-lg-6 col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-1.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">organic </span> <strong>
+                                fruits</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 52 items </i> </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-2.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">fresh </span> <strong>
+                                vegetables</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 35 items </i> </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-3.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">organic </span> <strong>
+                                breads</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 23 items </i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="organic-prod-info">
+                    <h4 class="sub-title"> FRESH FROM OUR FARM </h4>
+                    <h2 class="section-title ptb-15"><span class="light-font">220+ </span> <strong>fruits,
+                        vegetables </strong> <span class="light-font"> & </span> <strong> lot more</strong></h2>
+                    <p class="fsz-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                        quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row sec-space-top">
+            <div class="col-lg-6 col-sm-12">
+                <div class="organic-prod-info">
+                    <h4 class="sub-title"> FRESH FROM OUR FARM </h4>
+                    <h2 class="section-title ptb-15"><span class="light-font">115+ </span> <strong>organic
+                        juices </strong> <span class="light-font"> and </span> <strong> organic tea</strong></h2>
+                    <p class="fsz-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                        quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-4.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">organic </span> <strong>
+                                juices</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 26 items </i> </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-5.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">dried </span> <strong>
+                                juices</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 31 items </i> </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="organic-prod">
+                            <img src="/static/assets/img/extra/organic-6.png" alt=""/>
+                            <span class="divider"></span>
+                            <h3 class="title-1"><a href="#"> <span class="light-font">organic </span> <strong>
+                                tea</strong> </a></h3>
+                            <a class="clr-txt font-2" href="#"> <i> 17 items </i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Our Products Ends -->
+{% endblock %}
+
+
+{% block subs %}
+<!-- Product Preview Popup -->
+<section class="modal fade" id="product-preview" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg product-modal">
+        <div class="modal-content">
+            <a aria-hidden="true" data-dismiss="modal" class="sb-close-btn close" href="#"> <i class=" fa fa-close"></i>
+            </a>
+
+            <div class="product-single pb-50 clearfix">
+                <!-- Single Products Slider Starts -->
+                <div class="col-lg-6 col-sm-8 col-sm-offset-2 col-lg-offset-0 pt-50">
+                    <div class="prod-slider sync1">
+                        <div class="item">
+                            <img src="/static/assets/img/products/prod-single-1.png" alt="">
+                            <a href="/static/assets/img/products/prod-big-1.png" data-gal="prettyPhoto[prettyPhoto]"
+                               title="Product" class="caption-link"><i class="arrow_expand"></i></a>
+                        </div>
+                        <div class="item">
+                            <img src="/static/assets/img/products/prod-single-2.png" alt="">
+                            <a href="/static/assets/img/products/prod-big-2.png" data-gal="prettyPhoto[prettyPhoto]"
+                               title="Product" class="caption-link"><i class="arrow_expand"></i></a>
+                        </div>
+                        <div class="item">
+                            <img src="/static/assets/img/products/prod-single-3.png" alt="">
+                            <a href="/static/assets/img/products/prod-big-3.png" data-gal="prettyPhoto[prettyPhoto]"
+                               title="Product" class="caption-link"><i class="arrow_expand"></i></a>
+                        </div>
+                        <div class="item">
+                            <img src="/static/assets/img/products/prod-single-1.png" alt="">
+                            <a href="/static/assets/img/products/prod-big-1.png" data-gal="prettyPhoto[prettyPhoto]"
+                               title="Product" class="caption-link"><i class="arrow_expand"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="sync2">
+                        <div class="item"><a href="#"> <img src="/static/assets/img/products/thumb-1.png" alt=""> </a>
+                        </div>
+                        <div class="item"><a href="#"> <img src="/static/assets/img/products/thumb-2.png" alt=""> </a>
+                        </div>
+                        <div class="item"><a href="#"> <img src="/static/assets/img/products/thumb-3.png" alt=""> </a>
+                        </div>
+                        <div class="item"><a href="#"> <img src="/static/assets/img/products/thumb-1.png" alt=""> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Products Slider Ends -->
+
+                <div class="col-lg-6 pt-50">
+                    <div class="product-content block-inline">
+
+                        <div class="tag-rate">
+                            <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                            <div class="rating">
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="fsz-12"> Based on 25 reviews</span>
+                            </div>
+                        </div>
+
+                        <div class="single-caption">
+                            <h3 class="section-title">
+                                <a href="#"> <span class="light-font"> organic </span> <strong>pinapple</strong></a>
+                            </h3>
+                            <span class="divider-2"></span>
+                            <p class="price">
+                                <strong class="clr-txt fsz-20">$50.00 </strong>
+                                <del class="light-font">$65.00</del>
+                            </p>
+
+                            <div class="fsz-16">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adiping elit food sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                            </div>
+
+                            <div class="prod-btns">
+                                <div class="quantity">
+                                    <button class="btn minus"><i class="fa fa-minus-circle"></i></button>
+                                    <input title="Qty" placeholder="03" class="form-control qty" type="text">
+                                    <button class="btn plus"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                                <div class="sort-dropdown">
+                                    <div class="search-selectpicker selectpicker-wrapper">
+                                        <select class="selectpicker input-price" data-width="100%"
+                                                data-toggle="tooltip">
+                                            <option>Kilo</option>
+                                            <option>2 Kilo</option>
+                                            <option>3 Kilo</option>
+                                            <option>4 Kilo</option>
+                                            <option>5 Kilo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="checkbox-inline"><input value="" type="checkbox">
+                                    <span>Ready in stock</span></label></div>
+                            </div>
+                            <ul class="meta">
+                                <li><strong> SKU </strong> <span>:  AB2922-B</span></li>
+                                <li><strong> CATEGORY </strong> <span>:  Fruits</span></li>
+                                <li class="tags-widget"><strong> TAGS </strong> <span>:  <a href="#">fruits</a> <a
+                                        href="#">vegetables</a> <a href="#">juices</a></span></li>
+                            </ul>
+                            <div class="divider-full-1"></div>
+                            <div class="add-cart pt-15">
+                                <a href="#" class="theme-btn btn"> <strong> ADD TO CART </strong> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- / Product Preview Popup -->
+
+
+<!-- Subscribe Popup-Dark -->
+<section id="subscribe-popups" class="subscribe-me popups-wrap">
+    <div class="modal-content">
+        <button type="button" class="sb-close-btn close popup-cls"><i class="fa-times fa clr-txt"></i></button>
+        <div class="subscribe-wrap">
+            <div class="main-logo">
+                <a href="index.html"> <strong>naturix <img src="assets/img/icons/logo-icon.png" alt=""/> </strong> <span
+                        class="light-font">farmfood</span> </a>
+            </div>
+
+            <div class="title-wrap">
+                <h2 class="section-title"><strong>Subscribe Newsletter</strong></h2>
+                <h4 class="fsz-12"> Join our newsletter for free & get latest news weekly </h4>
+            </div>
+
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input class="form-control" placeholder="enter your email address" required="" type="text">
+                </div>
+                <div class="form-group">
+                    <button class="theme-btn upper-text" type="submit"><strong> subscribe </strong></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- / Subscribe Popup-Dark -->
+{% endblock %}

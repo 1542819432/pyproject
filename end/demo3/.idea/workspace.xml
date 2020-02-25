@@ -2,28 +2,142 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9020753d-28b7-4545-bb8f-c9eab2bca228" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/feed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/search_indexes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/templatetags/myfun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/whoosh_cn_backend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/templates/search/indexes/blogapp/article_text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo2/blog/templates/search/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/demo3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/apps/blogapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/templates/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo2/blog/templates/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/../demo2/blog/templates/single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/apps/shop/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/apps/shop/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/apps/shop/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/apps/shop/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/fonts/helvetica-bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/plugin/subscribe-better.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/blog/blog-sm-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/blog/blog-sm-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/80x80-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/banner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/banner-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/banner-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/breadcrumb-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/breadcrumb-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/cart-sm-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/cart-sm-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/cart-sm-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/close-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/deal-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/deal-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/deal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/feature-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/feature-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/feature-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/feature-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/feature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/menu-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/menu-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/menu-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/menu-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/menu-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/organic-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/post-xs-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/post-xs-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/post-xs-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/post-xs-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/random-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/review-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/sec-img-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/subscribe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/extra/testi-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/cart-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/logo-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/shap-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/slide-txt-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/slide-txt-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/slide-txt-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/icons/white-pattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/logo/logo-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/logo/logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-big-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-big-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-big-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-single-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-single-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/prod-single-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/thumb-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/thumb-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/products/thumb-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/slider/slide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/img/slider/slide-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/jquery-2.2.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/jquery.countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/jquery.plugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/jquery.subscribe-better.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/plugin/respond.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/static/assets/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/about-us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/my-account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/shop-single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitshop/templates/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/fruitshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/fruitshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/fruitshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/fruitshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/apps/shop/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/apps/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/apps/shop/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruitshop/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fruitshop/apps/shop/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,17 +146,89 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fruitshop/shop/models.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="350">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="11" column="42" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fruitshop/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="42" column="14" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fruitshop/templates/shop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="163" column="46" selection-start-line="163" selection-start-column="46" selection-end-line="163" selection-end-column="46" />
+              <folding>
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#3;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#3;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+                <element signature="n#a#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#h3#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#p#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>about-1.png</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -51,16 +237,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/fruitshop/shop/models.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/demo3.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/fruitshop/apps/shop/url.py" />
+        <option value="$PROJECT_DIR$/fruitshop/fruitshop/urls.py" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/base.py" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/about.html" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/login.html" />
+        <option value="$PROJECT_DIR$/fruitshop/fruitshop/settings.py" />
+        <option value="$PROJECT_DIR$/11/fruitshop/apps/shop/urls.py" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/contact.html" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/my-account.html" />
+        <option value="$PROJECT_DIR$/fruitshop/apps/shop/admin.py" />
+        <option value="$PROJECT_DIR$/fruitshop/apps/shop/models.py" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/index.html" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/about-us.html" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/shop-single.html" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/shop.html" />
+        <option value="$PROJECT_DIR$/fruitshop/apps/shop/views.py" />
+        <option value="$PROJECT_DIR$/fruitshop/apps/shop/urls.py" />
+        <option value="$PROJECT_DIR$/fruitshop/templates/base.html" />
       </list>
     </option>
   </component>
@@ -93,7 +287,32 @@
               <item name="demo3" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo3" type="462c0819:PsiDirectoryNode" />
               <item name="fruitshop" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3" type="462c0819:PsiDirectoryNode" />
+              <item name="fruitshop" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3" type="462c0819:PsiDirectoryNode" />
+              <item name="fruitshop" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3" type="462c0819:PsiDirectoryNode" />
+              <item name="fruitshop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo3" type="462c0819:PsiDirectoryNode" />
+              <item name="fruitshop" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -102,8 +321,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\py1911\project1\end\demo3\11" />
+      <recent name="E:\py1911\project1\end\demo3" />
+      <recent name="E:\py1911\project1\end\demo3\fruitshop" />
+      <recent name="E:\py1911\project1\end\demo3\fruitshop\templates" />
+      <recent name="E:\py1911\project1\end\demo3\fruitshop\11" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\py1911\project1\end\demo3\fruitshop\static" />
+      <recent name="E:\py1911\project1\end\demo3\fruitshop\templates" />
+      <recent name="E:\py1911\project1\end\demo3\fruitshop" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -128,36 +363,285 @@
       <option name="presentableId" value="Default" />
       <updated>1582525165482</updated>
     </task>
+    <task id="LOCAL-00001" summary="模型类设计">
+      <created>1582529846189</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582529846189</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15401785" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15550596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3704918" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="模型类设计" />
+    <option name="LAST_COMMIT_MESSAGE" value="模型类设计" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fruitshop/shop/models.py">
+    <entry file="file://$PROJECT_DIR$/fruitshop/5.jpg" />
+    <entry file="file://$PROJECT_DIR$/fruitshop/media/img/5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11/css/fw.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/base.py" />
+    <entry file="file://$PROJECT_DIR$/11/product_checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="150">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/index.html" />
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/css/fw.css" />
+    <entry file="file://$PROJECT_DIR$/fruitshop/static/assets/js/plugin/respond.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23490">
+          <caret line="783" column="13" selection-start-line="783" selection-start-column="13" selection-end-line="783" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="25" />
+          <folding>
+            <element signature="n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/fruitshop/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/fruitshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#section#0;n#!!top" />
+            <element signature="n#section#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/my-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#section#0;n#!!top" />
+            <element signature="n#section#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/static/assets/img/icons/logo-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/media/img/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/static/assets/img/icons/shap-small.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/about-us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="136" column="14" lean-forward="true" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
+          <folding>
+            <element signature="n#section#0;n#!!top" />
+            <element signature="e#12809#14149#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#214040#215212#0" />
+            <element signature="e#215684#216825#0" />
+            <element signature="e#218857#220453#0" />
+            <element signature="e#220490#222130#0" />
+            <element signature="e#222167#223890#0" />
+            <element signature="e#223927#225525#0" />
+            <element signature="e#225562#227156#0" />
+            <element signature="e#227193#228826#0" />
+            <element signature="e#228863#230586#0" />
+            <element signature="e#230623#232260#0" />
+            <element signature="e#230683#232217#0" />
+            <element signature="e#232297#233893#0" />
+            <element signature="e#233930#235563#0" />
+            <element signature="e#235600#237323#0" />
+            <element signature="e#237360#238958#0" />
+            <element signature="e#238995#240589#0" />
+            <element signature="e#240626#242259#0" />
+            <element signature="e#242296#244019#0" />
+            <element signature="e#244056#245779#0" />
+            <element signature="e#245816#247414#0" />
+            <element signature="e#247451#249174#0" />
+            <element signature="e#249211#250809#0" />
+            <element signature="e#352733#356404#0" />
+            <element signature="e#356503#362571#0" />
+            <element signature="n#section#0;n#!!top" />
+            <element signature="n#section#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/shop-single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#!!top" />
+            <element signature="n#h3#0;n#div#3;n#div#1;n#div#0;n#div#0;n#section#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="163" column="46" selection-start-line="163" selection-start-column="46" selection-end-line="163" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#3;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#3;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#3;n#div#1;n#section#1;n#!!top" />
+            <element signature="n#a#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#h3#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#p#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/apps/shop/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fruitshop/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
         </state>
       </provider>
     </entry>

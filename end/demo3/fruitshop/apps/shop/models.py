@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Ads(models.Model):
-    img = models.ImageField(upload_to='ads', verbose_name="图片")
+    img = models.ImageField(upload_to='ads',verbose_name="图片")
 
 
 class Category(models.Model):
@@ -13,17 +13,23 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-
-class Goods(models.Model):
-    name = models.CharField(max_length=20, verbose_name="商品名")
-    price = models.FloatField(verbose_name="价格")
-    size = models.CharField(verbose_name="尺寸")
-    matures = models.CharField(verbose_name="成熟期")
-    explain = models.CharField(max_length=100, verbose_name="说明")
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="分类")
+class Tag(models.Model):
+    name = models.CharField(max_length=20, verbose_name="标签名")
 
     def __str__(self):
         return self.name
+
+class Goods(models.Model):
+    name = models.CharField(max_length=20, verbose_name="商品名")
+    img = models.ImageField(upload_to='img',verbose_name="商品图片")
+    price = models.FloatField(verbose_name="价格")
+    describe = models.CharField(max_length=100, verbose_name="描述")
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="分类")
+    tags = models.ManyToManyField(Tag)
+
+    def __str__(self):
+        return self.name
+
 
 
 class Comment(models.Model):
@@ -33,4 +39,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.name
-

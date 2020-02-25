@@ -1,0 +1,368 @@
+﻿{% extends 'base.html' %}
+
+
+{% block load %}
+
+{% endblock %}
+
+{% block header %}
+<div class="header-topbar">
+    <div class="container-fluid">
+        <div class="left">
+            <ul class="top-nav">
+                <li>
+                    <span>Email : </span> <a href="#">contact@naturix.com </a>
+                </li>
+                <li> Phone : +100 3434 1057</li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="top-nav">
+                <li>
+                    <form action="#" class="currency">
+                        <div class="search-selectpicker selectpicker-wrapper">
+                            <select class="selectpicker input-price" data-width="100%"
+                                    data-toggle="tooltip">
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>ARS</option>
+                                <option>BRL</option>
+                                <option>XAF</option>
+                                <option>HUF</option>
+                            </select>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <form action="#" class="currency">
+                        <div class="search-selectpicker selectpicker-wrapper">
+                            <select class="selectpicker input-price" data-width="100%"
+                                    data-toggle="tooltip">
+                                <option>United State</option>
+                                <option>Argentina</option>
+                                <option>Germany</option>
+                                <option>Cameroon</option>
+                                <option>Hungary</option>
+                            </select>
+                        </div>
+                    </form>
+                </li>
+                <li class="social-icon">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google-plus"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-behance"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<!--Breadcrumb Section Start-->
+<section class="breadcrumb-bg">
+    <div class="theme-container container ">
+        <div class="site-breadcumb white-clr">
+            <h2 class="section-title"><strong class="clr-txt">naturix </strong> <span
+                    class="light-font">Shop </span></h2>
+            <ol class="breadcrumb breadcrumb-menubar">
+                <li><a href="#"> Home </a> SHOP</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!--Breadcrumb Section End-->
+
+
+<!-- Shop Starts-->
+<section class="shop-wrap sec-space-bottom">
+    <div class="pattern">
+        <img alt="" src="/static/assets/img/icons/white-pattern.png">
+    </div>
+
+    <div class="container rel-div">
+        <div class="row sort-bar">
+            <div class="icon"><img alt="" src="/static/assets/img/logo/logo-2.png"/></div>
+            <div class="col-lg-6">
+                <div class="sort-dropdown left">
+                    <span>CATEGORY</span>
+                    <div class="search-selectpicker selectpicker-wrapper">
+                        <select class="selectpicker input-price" data-width="100%"
+                                data-toggle="tooltip">
+                            <option>All product</option>
+                            <option>A - Z</option>
+                            <option>Z - A</option>
+                            <option> Low - High</option>
+                            <option> High - Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sort-dropdown">
+                    <span>SORT BY</span>
+                    <div class="search-selectpicker selectpicker-wrapper">
+                        <select class="selectpicker input-price" data-width="100%"
+                                data-toggle="tooltip">
+                            <option>Popular item</option>
+                            <option>A - Z</option>
+                            <option>Z - A</option>
+                            <option> Low - High</option>
+                            <option> High - Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 right">
+                <div class="sort-dropdown">
+                    <span>BY PRICE</span>
+                    <div class="search-selectpicker selectpicker-wrapper">
+                        <select class="selectpicker input-price" data-width="100%"
+                                data-toggle="tooltip">
+                            <option> Low to High</option>
+                            <option> High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sort-range">
+                    <span>PRICE</span>
+                    <div id="price-range"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-full-1"></div>
+
+        <div class="result-bar block-inline">
+            <h4 class="result-txt">search result <b> 125 </b></h4>
+            <ul class="view-tabs">
+                <li class="active">
+                    <a href="#grid-view" data-toggle="tab">
+                        <i class="fa fa-th"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#list-view" data-toggle="tab">
+                        <i class="fa fa-th-list"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content shop-content">
+            <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
+                <div class="row">
+                    {% for g in page.object_list %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-box">
+                            <div class="product-media">
+                                <img class="prod-img" alt="" src="/media/{{g.img}}"/>
+                                <img class="shape" alt="" src="/static/assets/img/icons/shap-small.png"/>
+                                <div class="prod-icons">
+                                    <a href="#" class="fa fa-heart"></a>
+                                    <a href="#" class="fa fa-shopping-basket"></a>
+                                    <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                                </div>
+                            </div>
+                            <div class="product-caption">
+                                <h3 class="product-title">
+                                    <a href="#"> <span class="light-font"> 有机 </span> <strong>{{g.name}}</strong></a>
+                                </h3>
+                                <div class="price">
+                                    <strong class="clr-txt">${{g.price}} </strong>
+                                    <del class="light-font">$65.00</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="rel-div pt-50">
+                    <div class="divider-full-1"></div>
+                    <div class="nav-page">
+                        {% if page.has_previous %}
+                        <a href="?pagenum={{page.previous_page_number}}" class="fa fa-long-arrow-left left"></a>
+                        {% endif %}
+                        {% if page.has_next %}
+                        <a href="?pagenum={{page.next_page_number}}" class="fa fa-long-arrow-right right"></a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="pagination-wrap">
+                    <ul class="pagintn">
+                        {% for pn in page.paginator.page_range %}
+                        {% if pn == page.number %}
+                        <li class="current"><a href="?pagenum={{pn}}">{{pn}}</a></li>
+                        {% else %}
+                        <li><a href="?pagenum={{pn}}">{{pn}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+
+            <div id="list-view" class="tab-pane fade" role="tabpanel">
+                <div class="row">
+                    {% for g in pages.object_list %}
+                    <div class="col-md-6 col-sm-12">
+                        <div class="deal-item list-view">
+                            <div class="deal-icons">
+                                <a href="#" class="fa fa-heart"></a>
+                                <a href="#" class="fa fa-shopping-basket"></a>
+                                <a href="#product-preview" data-toggle="modal" class="fa fa-expand"></a>
+                            </div>
+                            <div class="deal-content">
+                                <div class="text-right">
+                                    <span class="prod-tag tag-1">new</span> <span
+                                        class="prod-tag tag-2">{{g.name}}</span>
+                                </div>
+                                <div class="deal-text">
+                                    <h4 class="sub-title"> ORGANIC FRUITS </h4>
+                                    <h2 class="fsz-30 pb-15"><a href="#"> <span class="light-font">新鲜的 </span>
+                                        <strong>rasberry </strong> </a></h2>
+                                    <p>{{g.describe}}...</p>
+                                    <div class="price pt-15">
+                                        <strong class="clr-txt">${{g.price}} </strong>
+                                        <del class="light-font">$65.00</del>
+                                    </div>
+                                </div>
+                                <div class="img"><img alt="" src="/media/{{g.img}}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="rel-div pt-50">
+                    <div class="divider-full-1"></div>
+                    <div class="nav-page">
+                        {% if pages.has_previous %}
+                        <a href="?pagenum={{pages.previous_page_number}}" class="fa fa-long-arrow-left left"></a>
+                        {% endif %}
+                        {% if page.has_next %}
+                        <a href="?pagenum={{pages.next_page_number}}" class="fa fa-long-arrow-right right"></a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="pagination-wrap">
+                    <ul class="pagintn">
+                        {% for pn in page.paginator.page_range %}
+                        {% if pn == page.number %}
+                        <li class="current"><a href="?pagenum={{pn}}">{{pn}}</a></li>
+                        {% else %}
+                        <li><a href="?pagenum={{pn}}">{{pn}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Shop Ends -->
+
+<!-- / CONTENT AREA -->
+
+{% endblock %}
+
+{% block subs %}
+<!-- Product Preview Popup -->
+<section class="modal fade" id="product-preview" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg product-modal">
+        <div class="modal-content">
+            <a aria-hidden="true" data-dismiss="modal" class="sb-close-btn close" href="#"> <i class=" fa fa-close"></i>
+            </a>
+
+            <div class="product-single pb-50 clearfix">
+                <!-- Single Products Slider Starts -->
+                <div class="col-lg-6 col-sm-8 col-sm-offset-2 col-lg-offset-0 pt-50">
+                    <div class="prod-slider sync1">
+                        <div class="item">
+                            <img src="/media/{{goods.img}}" alt="">
+                            <a href="/static/assets/img/products/prod-big-1.png" data-gal="prettyPhoto[prettyPhoto]"
+                               title="Product" class="caption-link"><i class="arrow_expand"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Single Products Slider Ends -->
+
+                <div class="col-lg-6 pt-50">
+                    <div class="product-content block-inline">
+
+                        <div class="tag-rate">
+                            <span class="prod-tag tag-1">new</span> <span class="prod-tag tag-2">sale</span>
+                            <div class="rating">
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="fsz-12"> Based on 25 reviews</span>
+                            </div>
+                        </div>
+
+                        <div class="single-caption">
+                            <h3 class="section-title">
+                                <a href="#"> <span class="light-font"> organic </span> <strong>pinapple</strong></a>
+                            </h3>
+                            <span class="divider-2"></span>
+                            <p class="price">
+                                <strong class="clr-txt fsz-20">$50.00 </strong>
+                                <del class="light-font">$65.00</del>
+                            </p>
+
+                            <div class="fsz-16">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adiping elit food sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                            </div>
+
+                            <div class="prod-btns">
+                                <div class="quantity">
+                                    <button class="btn minus"><i class="fa fa-minus-circle"></i></button>
+                                    <input title="Qty" placeholder="03" class="form-control qty" type="text">
+                                    <button class="btn plus"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                                <div class="sort-dropdown">
+                                    <div class="search-selectpicker selectpicker-wrapper">
+                                        <select class="selectpicker input-price" data-width="100%"
+                                                data-toggle="tooltip">
+                                            <option>Kilo</option>
+                                            <option>2 Kilo</option>
+                                            <option>3 Kilo</option>
+                                            <option>4 Kilo</option>
+                                            <option>5 Kilo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="checkbox-inline"><input value="" type="checkbox">
+                                    <span>Ready in stock</span></label></div>
+                            </div>
+                            <ul class="meta">
+                                <li><strong> SKU </strong> <span>:  AB2922-B</span></li>
+                                <li><strong> CATEGORY </strong> <span>:  Fruits</span></li>
+                                <li class="tags-widget"><strong> TAGS </strong> <span>:  <a href="#">fruits</a> <a
+                                        href="#">vegetables</a> <a href="#">juices</a></span></li>
+                            </ul>
+                            <div class="divider-full-1"></div>
+                            <div class="add-cart pt-15">
+                                <a href="#" class="theme-btn btn"> <strong> ADD TO CART </strong> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- / Product Preview Popup -->
+{% endblock %}
+
