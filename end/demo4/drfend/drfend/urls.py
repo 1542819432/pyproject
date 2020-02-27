@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.views.static import serve
+from django.conf.urls import url
+from .settings import MEDIA_ROOT
 from shop.views import *
+
+# 引入API文档路由
+from rest_framework.documentation import include_docs_urls
 
 # 引入DRF自带的路由类
 from rest_framework import routers
@@ -24,12 +30,16 @@ router = routers.DefaultRouter()
 # 可以通过router默认路由注册资源
 router.register('categorys',CategoryViewSets)
 router.register('goods',GoodViewSets)
+router.register('goodimgs',GoodImgsViewSets)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url('media/(?P<path>.*)',serve,{'document_root': MEDIA_ROOT}),
     # 配置RestFulAPI
     path('api/v1/',include(router.urls)),
+    # API文档地址
+    path('api/v1/docs/',include_docs_urls(title="RestFulAPI",description="RestFulAPI v1")),
     # 为了在DRF路由调试界面能够使用用户相关功能需要引入以下路由
     path('', include('rest_framework.urls')),
 
