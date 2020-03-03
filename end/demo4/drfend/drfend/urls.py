@@ -28,9 +28,11 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 
 # 可以通过router默认路由注册资源
-router.register('categorys',CategoryViewSets2)
+router.register('categorys',CategoryViewSets)
 router.register('goods',GoodViewSets)
 router.register('goodimgs',GoodImgsViewSets)
+router.register('users',UserViewSets)
+router.register('orders',OrderViewSets)
 
 
 urlpatterns = [

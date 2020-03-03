@@ -131,4 +131,18 @@ MEDIAFIELS_DIRS = [os.path.join(BASE_DIR,'media')]
 REST_FRAMEWORK = {
     # Schema
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
+    # 默认的权限配置每一个http方法都可以有对应的权限配置
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    # 全局认证 优先级高于视图类中的配置
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+            # 默认首先使用session认证
+            'rest_framework.authentication.SessionAuthentication',
+            # 默认首先使用basic认证
+            'rest_framework.authentication.BasicAuthentication'
+        ],
+
 }
+
+AUTH_USER_MODEL = 'shop.User'

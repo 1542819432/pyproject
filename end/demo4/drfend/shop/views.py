@@ -24,7 +24,7 @@ from .serializers import *
 from django.http import HttpResponse
 
 # 通过api_view装饰器可以将基于函数的视图函数转换成APIView基于类的视图
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
 from rest_framework import status
 
@@ -34,6 +34,9 @@ from django.views import View
 from rest_framework.views import APIView
 from rest_framework import generics
 from rest_framework import mixins
+
+from rest_framework import permissions
+from . import permissions as mypermissions
 
 
 class CategoryListView2(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateModelMixin):
@@ -164,6 +167,7 @@ class CategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
+
 class CategoryViewSets2(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -179,6 +183,16 @@ class CategoryViewSets(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
+    # 用户为登陆不显示 分类列表
+    # permission_classes = [permissions.IsAdminUser]
+    # 超级管理员可以创建分类 普通用户可以查看分类
+    def get_permissions(self):
+        if self.action == "create" or self.action == "update" or self.action == "partial_update" or self.action == "destory":
+            return [permissions.IsAdminUser()]
+            # return [permissions.CategoryPermission()]
+        else:
+            return [permissions.IsAdminUser()]
+
 
 class GoodViewSets(viewsets.ModelViewSet):
     queryset = Good.objects.all()
@@ -188,3 +202,43 @@ class GoodViewSets(viewsets.ModelViewSet):
 class GoodImgsViewSets(viewsets.ModelViewSet):
     queryset = GoodImgs.objects.all()
     serializer_class = GoodImgsSerializer
+
+
+class UserViewSets1(viewsets.GenericViewSet, mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                    mixins.DestroyModelMixin):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    @action(methods=["POST"], detail=False)
+    def regist(self, request):
+        seria = UserRegistSerializer(data=request.data)
+        seria.is_valid(raise_exception=True)
+        seria.save()
+        return Response(seria.data, status=status.HTTP_201_CREATED)
+
+
+class UserViewSets(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
+                   mixins.DestroyModelMixin):
+    queryset = User.objects.all()
+
+    # serializer_class = UserSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return UserRegistSerializer
+        return UserSerializer
+
+class OrderViewSets(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+    # permission_classes = [permissions.OrderPermission]
+
+    def get_permissions(self):
+        if self.action == 'create':
+            return [permissions.IsAuthenticated()]
+        elif self.action == "update" or self.action == "partial_update" or self.action == "retrieve":
+            return [mypermissions.OrderPermission]
+        else:
+            return [permissions.IsAdminUser]
+

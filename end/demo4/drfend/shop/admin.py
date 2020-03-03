@@ -6,6 +6,8 @@ from .models import *
 admin.site.register(Category)
 admin.site.register(Good)
 admin.site.register(GoodImgs)
+admin.site.register(User)
+admin.site.register(Order)
 
 
 
