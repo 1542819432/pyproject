@@ -23,6 +23,9 @@ from shop.views import *
 # 引入API文档路由
 from rest_framework.documentation import include_docs_urls
 
+# 引入restframework_simple 路由
+from rest_framework_simplejwt.views import token_obtain_pair,token_refresh
+
 # 引入DRF自带的路由类
 from rest_framework import routers
 router = routers.DefaultRouter()
@@ -51,7 +54,8 @@ urlpatterns = [
     # url(r'^categorys/$',CategoryViewSets2.as_view({'get':'list','post':'create'})),
     # url(r'^categorys/(?P<pk>\d+)/$',CategoryViewSets2.as_view({'get':'retrieve','put':'update','patch':'update','delete':'destroy'})),
 
-
+    url(r'^obtaintoken/$',token_obtain_pair,name='login'),
+    url(r'^refresh/$',token_refresh,name='refresh'),
     # API文档地址
     path('api/v1/docs/',include_docs_urls(title="RestFulAPI",description="RestFulAPI v1")),
     # 为了在DRF路由调试界面能够使用用户相关功能需要引入以下路由

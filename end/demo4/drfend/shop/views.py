@@ -38,6 +38,14 @@ from rest_framework import mixins
 from rest_framework import permissions
 from . import permissions as mypermissions
 
+from rest_framework import throttling
+from .throttling import MyAnon,MyUser
+
+from .pagination import MyPagination
+
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
+
 
 class CategoryListView2(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateModelMixin):
     queryset = Category.objects.all()
@@ -191,12 +199,24 @@ class CategoryViewSets(viewsets.ModelViewSet):
             return [permissions.IsAdminUser()]
             # return [permissions.CategoryPermission()]
         else:
-            return [permissions.IsAdminUser()]
+            return []
+
+    throttle_classes = [MyAnon,MyUser]
+    # pagination_class = MyPagination
+
+
+    # 局部过滤配置
+    filter_backends = [DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter]
+    filterset_fields = ["name"]
+    search_fields = ["name"]
+    ordering_fields = ["id"]
 
 
 class GoodViewSets(viewsets.ModelViewSet):
     queryset = Good.objects.all()
     serializer_class = GoodSerializer
+
+    filterset_fields = ["name"]
 
 
 class GoodImgsViewSets(viewsets.ModelViewSet):
@@ -228,6 +248,7 @@ class UserViewSets(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.Retr
             return UserRegistSerializer
         return UserSerializer
 
+
 class OrderViewSets(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
@@ -241,4 +262,3 @@ class OrderViewSets(viewsets.ModelViewSet):
             return [mypermissions.OrderPermission]
         else:
             return [permissions.IsAdminUser]
-
