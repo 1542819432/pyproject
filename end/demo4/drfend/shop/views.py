@@ -39,12 +39,21 @@ from rest_framework import permissions
 from . import permissions as mypermissions
 
 from rest_framework import throttling
-from .throttling import MyAnon,MyUser
+from .throttling import MyAnon, MyUser
 
 from .pagination import MyPagination
 
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
+
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
+
+@api_view(["GET"])
+def getuserinfo(request):
+    user = JWTAuthentication().authenticate(request)
+    seria = UserSerializer(instance=user[0])
+    return Response(seria.data, status=status.HTTP_200_OK)
 
 
 class CategoryListView2(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateModelMixin):
@@ -201,12 +210,11 @@ class CategoryViewSets(viewsets.ModelViewSet):
         else:
             return []
 
-    throttle_classes = [MyAnon,MyUser]
+    throttle_classes = [MyAnon, MyUser]
     # pagination_class = MyPagination
 
-
     # 局部过滤配置
-    filter_backends = [DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ["name"]
     search_fields = ["name"]
     ordering_fields = ["id"]

@@ -148,12 +148,12 @@ REST_FRAMEWORK = {
             # 'rest_framework.authentication.BasicAuthentication'
         ],
     # 配置全局的频次限制类
-    'DEFAULT_THROTTLE_CLASSES': ['rest_framework.throttling.AnonRateThrottle',
-                                 'rest_framework.throttling.UserRateThrottle'],
-    'DEFAULT_THROTTLE_RATES': {
-            'user': '4/minutes',
-            'anon': '2/minutes',
-        },
+    # 'DEFAULT_THROTTLE_CLASSES': ['rest_framework.throttling.AnonRateThrottle',
+    #                              'rest_framework.throttling.UserRateThrottle'],
+    # 'DEFAULT_THROTTLE_RATES': {
+    #         'user': '400/minutes',
+    #         'anon': '200/minutes',
+    #     },
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'PAGE_SIZE': 2,
